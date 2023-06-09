@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1= title
+    //- div(class="row mg-bt-20 col-6 mx-auto")
+    //-     label Saldo Atual:
+    //-         h2(class="display-1")= saldo_atual
+    //-     label Total de Despesas:
+    //-         h2(class="display-1")= total_despesas
+    //-     label= title_economia
+    //-         h2(class="display-1")= total_ganhos
+    br
+    table(class="table table-dark table-striped")
+        thead 
+            tr
+                th= title_economia
+        tbody
+            tr
+                th Saldo Atual 
+                td= saldo_atual
+            tr 
+                th Total de Despesas
+                td= total_despesas
+            tr 
+                th Total de Ganhos
+                td= total_ganhos
+            
+    button(onclick="location.href='./'" class="btn btn-outline-secondary btn-lg") Voltar

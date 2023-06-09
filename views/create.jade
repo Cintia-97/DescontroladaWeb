@@ -1,0 +1,24 @@
+extends layout
+
+block content 
+    div(class="container")
+        h1= title
+        form(method="post" onSubmit="return create()" target="_blank")
+            div(class="mb-3")
+                label(class="form-label" for="name") Nome
+                input#name(class="form-control" placeholder="nome da despesa/ganho" type="text" name="name")
+            div(class="mb-3")
+                label(class="form-label" class="form-label" for="origin") Tipo
+                select#origin(class="form-select" name="origin") 
+                    option(value="despesa") Despesa
+                    option(value="ganho") Ganho
+            div(class="mb-3")
+                label(class="form-label" for="value") Valor
+                input#value(class="form-control" placeholder="valor da despesa/ganho" type="number" name="value")
+            div(class="mb-3")
+                label(class="form-label" for="date") Data
+                input#date(class="form-control date" data-provide="datepicker" type="date" name="date")
+            br
+            div(class="d-grid gap-2")
+                input(type="submit" value="Criar" class="btn btn-outline-secondary btn-lg")
+                button(onclick="location.href='./'" class="btn btn-outline-warning btn-lg") Voltar
